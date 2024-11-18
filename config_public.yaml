@@ -1,0 +1,41 @@
+# config.yaml
+server:
+  port: "8080"
+  timeout: 30
+  read_timeout: 15
+  write_timeout: 15
+  max_header_bytes: 1048576
+
+database:
+  host: ""
+  port: ""
+  user: ""
+  password: ""
+  dbname: "GonPAY"
+  sslmode: "require"
+  max_open_conns: 25
+  max_idle_conns: 25
+  conn_max_lifetime: 300
+
+jwt:
+  secret: "your-256-bit-secret"
+  ttl: 24 # hours
+
+logger:
+  level: "info"
+  format: "json"
+  output: "stdout"
+
+cors:
+  allowed_origins:
+    - "*"
+  allowed_methods:
+    - "GET"
+    - "POST"
+    - "PUT"
+    - "DELETE"
+    - "OPTIONS"
+  allowed_headers:
+    - "Authorization"
+    - "Content-Type"
+  max_age: 300
